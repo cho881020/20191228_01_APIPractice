@@ -77,6 +77,13 @@ class LoginActivity : BaseActivity() {
                             ContextUtil.setUserToken(mContext, token)
 
 
+                            val intent = Intent(mContext, MainActivity::class.java)
+                            startActivity(intent)
+
+                            finish()
+
+
+
                         }
                         else {
 
