@@ -1,5 +1,6 @@
 package com.tjeit.a20191228_01_apipractice
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_login.*
@@ -25,6 +26,8 @@ class LoginActivity : BaseActivity() {
 //        3. 둘다 괜찮다면 별개로 분기만 준비.
 
         loginBtn.setOnClickListener {
+
+
 
             val inputId = idEdt.text.toString()
 
