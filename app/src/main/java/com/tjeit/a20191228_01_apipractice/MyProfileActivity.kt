@@ -2,7 +2,6 @@ package com.tjeit.a20191228_01_apipractice
 
 import android.content.DialogInterface
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -10,15 +9,15 @@ import androidx.appcompat.app.AlertDialog
 import com.tjeit.a20191228_01_apipractice.datas.User
 import com.tjeit.a20191228_01_apipractice.utils.ConnectServer
 import com.tjeit.a20191228_01_apipractice.utils.ContextUtil
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_my_profile.*
 import org.json.JSONObject
 
-class MainActivity : BaseActivity() {
+class MyProfileActivity : BaseActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_my_profile)
         setupEvents()
         setValues()
     }
