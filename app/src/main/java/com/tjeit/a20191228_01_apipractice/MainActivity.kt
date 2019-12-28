@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.tjeit.a20191228_01_apipractice.datas.User
 import com.tjeit.a20191228_01_apipractice.utils.ConnectServer
 import com.tjeit.a20191228_01_apipractice.utils.ContextUtil
 import kotlinx.android.synthetic.main.activity_main.*
@@ -71,11 +72,11 @@ class MainActivity : BaseActivity() {
                         val data = json.getJSONObject("data")
                         val user = data.getJSONObject("user")
 
-                        val userName = user.getString("name")
-                        val userPhoneNum = user.getString("phone")
+                        val loginUser = User.getUserFromJson(user)
 
-                        nameTxt.text = userName
-                        phoneTxt.text = userPhoneNum
+                        nameTxt.text = loginUser.name
+                        phoneTxt.text = loginUser.phoneNum
+                        loginIdTxt.text = loginUser.loginId
 
                     }
                     else {
